@@ -2,7 +2,7 @@
 
 - [BACK HOME](../README.md)
 
-- **dev structure**
+- **Dev structure**
 
     ```
     project
