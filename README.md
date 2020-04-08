@@ -1,10 +1,10 @@
 # DeepKW_Web
 
-[内容组 Contents](contents/README.md)
+[内容组 Contents](groups/contents/README.md)
 
-[设计组 Design](design/README.md)
+[设计组 Design](groups/design/README.md)
 
-[技术组 Technology](web/README.md)
+[技术组 Technology](project/README.md)
 
 ## 4.06--4.12
 
