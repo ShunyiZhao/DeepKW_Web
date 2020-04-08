@@ -2,7 +2,6 @@ const path = require('path');
 const webpack = require('webpack');
 const htmlWebpackPlugin = require('html-webpack-plugin');
 const vueLoaderPlugin = require('vue-loader/lib/plugin');
-const cleanWebpackPlugin = require('clean-webpack-plugin');
 var BUILD_PATH = path.resolve(__dirname, 'dist'); //发布文件所存放的目录
 module.exports = {
     entry: path.join(__dirname,'./src/index.js'),
@@ -12,8 +11,7 @@ module.exports = {
             template: path.join(__dirname, './src/index.html'), // 指定 模板页面，将来会根据指定的页面路径，去生成内存中的 页面
             filename: 'index.html' // 指定生成的页面的名称
         }),
-        new vueLoaderPlugin(),
-        new cleanWebpackPlugin()
+        new vueLoaderPlugin()
     ],
     module: { // 这个节点，用于配置 所有 第三方模块 加载器 
         rules: [ // 所有第三方模块的 匹配规则  调用顺序从右到左
