@@ -1,5 +1,5 @@
 import VueRouter from 'vue-router' //1.导入包
-import home from '../components/home.vue'
+import home from '../components/Home/home.vue'
 import about from '../components/About/about.vue'
 import works from '../components/Works/works.vue'
 import news from '../components/News/news.vue'
