@@ -1,14 +1,14 @@
 <template>
     <div>
+        <Basebanner></Basebanner>
         <h1>This is news page!!</h1>
-        <banner></banner>
     </div>
 </template>
 <script>
-import banner from '../banner.vue'
+import Basebanner from '../Common/Basebanner.vue'
 export default {
     components: {
-        banner
+        Basebanner
     }
 }
 </script>
