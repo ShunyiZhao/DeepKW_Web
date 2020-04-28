@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/W32TeX) (preloaded format=pdflatex 2019.11.28)  28 APR 2020 21:55
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/W32TeX) (preloaded format=pdflatex 2019.11.28)  28 APR 2020 22:29
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -167,15 +167,15 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 <img/02.png, id=1, 2570.60374pt x 1339.0025pt>
 File: img/02.png Graphic file (type png)
 <use img/02.png>
-Package pdftex.def Info: img/02.png  used on input line 41.
+Package pdftex.def Info: img/02.png  used on input line 40.
 (pdftex.def)             Requested size: 218.47882pt x 113.81102pt.
 <img/05.jpg, id=3, 1337.99875pt x 752.8125pt>
 File: img/05.jpg Graphic file (type jpg)
 <use img/05.jpg>
-Package pdftex.def Info: img/05.jpg  used on input line 42.
+Package pdftex.def Info: img/05.jpg  used on input line 41.
 (pdftex.def)             Requested size: 202.2632pt x 113.81102pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 37--47
+Underfull \hbox (badness 10000) in paragraph at lines 36--46
 
  []
 
@@ -191,7 +191,7 @@ Here is how much of TeX's memory you used:
  1141 hyphenation exceptions out of 8191
  51i,6n,32p,341b,221s stack positions out of 5000i,500n,10000p,200000b,80000s
 <d:/WorkTools/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><d:/WorkTools/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><d:/WorkTools/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><d:/WorkTools/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb><d:/WorkTools/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on d:/Files/GitHub/DeepKW_Web_CourseWork/report/report.pdf (2 pages, 5392998 bytes).
+Output written on d:/Files/GitHub/DeepKW_Web_CourseWork/report/report.pdf (2 pages, 5393002 bytes).
 PDF statistics:
  35 PDF objects out of 1000 (max. 8388607)
  22 compressed objects within 1 object stream
