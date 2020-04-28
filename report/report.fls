@@ -3,7 +3,7 @@ INPUT d:/WorkTools/texlive/2019/texmf.cnf
 INPUT d:/WorkTools/texlive/2019/texmf-dist/web2c/texmf.cnf
 INPUT d:/WorkTools/texlive/2019/texmf-var/web2c/pdftex/pdflatex.fmt
 INPUT d:/Files/GitHub/DeepKW_Web_CourseWork/report/report.tex
-OUTPUT d:\Files\GitHub\DeepKW_Web_CourseWork\report/report.log
+OUTPUT d:/Files/GitHub/DeepKW_Web_CourseWork/report/report.log
 INPUT d:/WorkTools/texlive/2019/texmf-dist/tex/latex/base/article.cls
 INPUT d:/WorkTools/texlive/2019/texmf-dist/tex/latex/base/article.cls
 INPUT d:/WorkTools/texlive/2019/texmf-dist/tex/latex/base/size10.clo
@@ -20,9 +20,9 @@ INPUT d:/WorkTools/texlive/2019/texmf-dist/tex/generic/iftex/ifvtex.sty
 INPUT d:/WorkTools/texlive/2019/texmf-dist/tex/generic/iftex/ifvtex.sty
 INPUT d:/WorkTools/texlive/2019/texmf-dist/tex/generic/iftex/ifxetex.sty
 INPUT d:/WorkTools/texlive/2019/texmf-dist/tex/generic/iftex/ifxetex.sty
-INPUT d:\Files\GitHub\DeepKW_Web_CourseWork\report/report.aux
-INPUT d:\Files\GitHub\DeepKW_Web_CourseWork\report/report.aux
-OUTPUT d:\Files\GitHub\DeepKW_Web_CourseWork\report/report.aux
+INPUT d:/Files/GitHub/DeepKW_Web_CourseWork/report/report.aux
+INPUT d:/Files/GitHub/DeepKW_Web_CourseWork/report/report.aux
+OUTPUT d:/Files/GitHub/DeepKW_Web_CourseWork/report/report.aux
 INPUT d:/WorkTools/texlive/2019/texmf-dist/fonts/map/fontname/texfonts.map
 INPUT d:/WorkTools/texlive/2019/texmf-dist/fonts/tfm/public/cm/cmr17.tfm
 INPUT d:/WorkTools/texlive/2019/texmf-dist/fonts/tfm/public/cm/cmr12.tfm
@@ -36,9 +36,9 @@ INPUT d:/WorkTools/texlive/2019/texmf-dist/fonts/tfm/public/cm/cmsy8.tfm
 INPUT d:/WorkTools/texlive/2019/texmf-dist/fonts/tfm/public/cm/cmsy6.tfm
 INPUT d:/WorkTools/texlive/2019/texmf-dist/fonts/tfm/public/cm/cmr12.tfm
 INPUT d:/WorkTools/texlive/2019/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm
-OUTPUT d:\Files\GitHub\DeepKW_Web_CourseWork\report/report.pdf
+OUTPUT d:/Files/GitHub/DeepKW_Web_CourseWork/report/report.pdf
 INPUT d:/WorkTools/texlive/2019/texmf-var/fonts/map/pdftex/updmap/pdftex.map
-INPUT d:\Files\GitHub\DeepKW_Web_CourseWork\report/report.aux
+INPUT d:/Files/GitHub/DeepKW_Web_CourseWork/report/report.aux
 INPUT d:/WorkTools/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
 INPUT d:/WorkTools/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb
 INPUT d:/WorkTools/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb
