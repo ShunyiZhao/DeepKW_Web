@@ -10,5 +10,5 @@ import '../src/assets/css/style.css'
 new Vue({
     el: '#app',
     render: c => c(app),
-    router: router //4.挂载
+    router: router, //4.挂载
 });

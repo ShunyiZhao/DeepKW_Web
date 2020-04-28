@@ -1,19 +1,16 @@
 <template>
-    <div id="FloatingText" class="FloatingDes">
-    234
-    {{message}}
-    555
+    <div class="FloatingText">
+        this is son---{{message}}
         <div class="titleDiv">
-        <p>{{ message }}</p>
+            <p>{{ message }}</p>
         <span>222{{ message }}334</span>
         </div>
     </div>
 </template>
 
 <script>
-var FloatingText = {
+export default {
     props: ['message'],
-    template:'#FloatingText',
     data:function(){
         return{
             msg:'ok!'
@@ -22,17 +19,13 @@ var FloatingText = {
     methods:{
     }
 }
-export default {
-    FloatingText
-}
 </script>
 
 <style>
-.FloatingDes {
-    width: 200px;
-    height: 300px;
+.FloatingText{
+    margin: 0.3rem;
+    width: 33%;
 }
-
 .titleDiv{
     font-size: 13px;
     color: white;
