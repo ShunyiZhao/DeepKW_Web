@@ -1,63 +1,69 @@
 <template>
     <div id="works">
         <Baseheader></Baseheader>
-        <LeftFrame id="navigation"></LeftFrame>
-
-        <FloatingText class="float_1" message="data1"></FloatingText>
-        <FloatingText class="float_2" message="897"></FloatingText>
+        <div class="container d-flex">
+            <LeftFrame id="navigation"></LeftFrame>
+            <div id="mainbody" class="d-flex flex-row justify-content-around flex-wrap">
+                <FloatingText :message="data1"></FloatingText>
+                <FloatingText :message="data2"></FloatingText>
+                <FloatingText :message="data1"></FloatingText>
+                <FloatingText :message="data2"></FloatingText>
+                <FloatingText :message="data1"></FloatingText>
+                <FloatingText :message="data2"></FloatingText>
+            </div>
+        </div>
+        <Basefooter class="fixed-bottom"></Basefooter>
     </div>
 </template>
 <script>
 import Basebanner from '../Common/Basebanner.vue'
 import Baseheader from '../Common/Baseheader.vue'
+import Basefooter from '../Common/Basefooter.vue'
 import LeftFrame from '../TextFrame/leftFrame.vue'
 import FloatingText from '../TextFrame/FloatText.vue'
 
 export default {
     data(){
-        return {
+        return{
             data1: "datafromother",
-        };
+            data2: "datafrofather"
+        }
     },
     components: {
         Basebanner,
         Baseheader,
+        Basefooter,
         LeftFrame,
-        FloatingText,
+        FloatingText
     }
 }
 </script>
 <style scoped>
+.container{
+    padding: 0;
+    margin: 0;
+    height: 90%;
+}
 #works {
     height: 100%;
     background-image: url(/assets/img/bg.png);
 }
-
 #header {
     height: 7%;
     background-color: black;
 }
-
 #navigation {
     font-size: 20pt;
     color: white;
     background-color: black;
-    width: 20%;
-    height: 93%;
+    width: 25%;
+    height: 100%;
 }
-
-.float_1 {
-    position: absolute;
-    left: 30%;
-    top: 30%;
+#mainbody{
+    width: 75%;
+    height: 100%;
+}
+.float {
     color: white;
 }
-
-.float_2 {
-    position: absolute;
-    left: 50%;
-    top: 30%;
-    color: white;
-}
-
 </style>
