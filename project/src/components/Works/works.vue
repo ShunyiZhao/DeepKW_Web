@@ -46,6 +46,7 @@ export default {
 }
 #works {
     height: 100%;
+    /*test comments in CSS*/
     background-image: url(/assets/img/bg.png);
 }
 #header {

@@ -1,6 +1,7 @@
 <template>
     <div id="header">
         <div id="logo">
+            <!--test cite in HTML-->
             <img id="logo_img" src="/assets/img/logo.png" alt="logo">
         </div>
         <div></div>

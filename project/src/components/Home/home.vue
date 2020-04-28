@@ -29,6 +29,7 @@ img {
     width: 100%;
     height: 100%;
 }
+/*test cite in CSS*/
 #home {
     background-image: url(/assets/img/bg.png);
     background-repeat:no-repeat;
