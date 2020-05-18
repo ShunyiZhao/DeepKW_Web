@@ -1,8 +1,7 @@
 <template>
     <div class="FloatingText">
-        this is son---{{message}}
         <div class="titleDiv">
-            <p>{{ message }}</p>
+            <p>{{ title }}</p>
         <span>222{{ message }}334</span>
         </div>
     </div>
@@ -10,7 +9,7 @@
 
 <script>
 export default {
-    props: ['message'],
+    props: ['title', 'message'],
     data:function(){
         return{
             msg:'ok!'
