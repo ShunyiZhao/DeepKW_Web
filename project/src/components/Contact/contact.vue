@@ -29,5 +29,6 @@ export default {
     background-color: white;
     width: 20%;
     height: 100%;
+    line-height: 150%;
 }
 </style>
