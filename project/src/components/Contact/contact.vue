@@ -5,8 +5,58 @@
             <p>Contact Us</p>
         </div>
         <Map :seenMap="seenMapCont"></Map>
-        <button id="button1" v-if="seenButton1" v-on:click="reverse">button1</button>
-        <button id="button2" v-if="seenButton2" v-on:click="reverse2">button2</button>
+
+        <input id="button1" type="image" src="/assets/img/Contact/formbutton.png" v-if="seenButton1" v-on:click="reverse">button1</input>
+        <input id="button2" type="image" src="/assets/img/Contact/returnButton.png" v-if="seenButton2" v-on:click="reverse2">button2</input>
+
+        <div id="form1" v-if="seenTable">
+            <table border="0">
+                <th>Personal Infomation</th>
+                <tr>
+                    <td>
+                        <span>Name: </span>
+                        <input placeholder="name" style="background:none" v-model="nameInput">
+                    </td>
+                    <td>
+                        <span>Gender:</span>
+                        <select style="background:none" v-model="genderInput">
+                            <option disable value="">Please select</option>
+                            <option>Male</option>
+                            <option>Female</option>
+                            <option>Others</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span>Country:</span>
+                        <select style="background:none" v-model="countryInput">
+                            <option disable value="">Select a country</option>
+                            <option>China</option>
+                            <option>French</option>
+                            <option>UK</option>
+                            <option>USA</option>
+                        </select>
+                    </td>
+                    <td>
+                        <span>University:</span>
+                        <input placeholder="university" style="background:none" v-model="uniInput">
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                    <span>Your instrests</span>
+                    <br>
+                    <textarea placeholder="Your interests" rows="10" cols="61" v-model="textInput"></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <button id="submit" v-on:click="submitTable">submit</button>
+                    </td>
+                </tr>
+            </table>
+        </div>
         <Basefooter class="fixed-bottom"></Basefooter>
     </div>
 </template>
@@ -21,9 +71,15 @@ import Map from "../ContactModules/Map.vue"
 export default {
     data: function(){
         return {
-            seenMapCont: false,
+            seenMapCont: true,
             seenButton1: true,
-            seenButton2: false
+            seenButton2: false,
+            seenTable:false,
+            nameInput: "",
+            genderInput: "",
+            countryInput: "",
+            uniInput: "",
+            textInput: "",
         }
     },
     components: {
@@ -36,12 +92,29 @@ export default {
         reverse: function(){
             this.seenMapCont = false,
             this.seenButton1 = false,
-            this.seenButton2 = true
+            this.seenButton2 = true,
+            this.seenTable = true
         },
         reverse2: function(){
             this.seenMapCont = true,
             this.seenButton1 = true,
-            this.seenButton2 = false
+            this.seenButton2 = false,
+            this.seenTable = false
+        },
+        submitTable: function(){
+            alert(this.nameInput);
+            alert(this.genderInput);
+            alert(this.countryInput);
+            alert(this.uniInput);
+            alert(this.textInput);
+            this.clearInfo();
+        },
+        clearInfo: function(){
+            this.nameInput=null;
+            this.genderInput=null;
+            this.countryInput=null;
+            this.uniInput=null;
+            this.textInput=null;
         }
     }
 }
@@ -83,11 +156,24 @@ export default {
     position:absolute;
     top:50%;
     left:80%;
+
+    height:200px;
 }
 
 #button2 {
     position:absolute;
     top:89%;
     left:95%;
+
+    height:50px;
+}
+
+#form1 {
+    position:absolute;
+    top: 20%;
+    left: 30%;
+    color:black;
+    font-size:20pt;
+    font-family:calibri;
 }
 </style>
