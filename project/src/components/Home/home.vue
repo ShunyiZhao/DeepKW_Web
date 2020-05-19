@@ -1,11 +1,11 @@
 <template>
     <div id="home" class="d-flex flex-column">
         <Baseheader></Baseheader>
-        <div id="mainHome" class="row">
-            <div class="col-3 border border-warning">
-                <Basebanner class="flex-basis"></Basebanner>
+        <div id="mainHome" class="d-flex">
+            <div class="px-5 flex-grow-1 d-flex justify-content-center align-items-center">
+                <Basebanner></Basebanner>
             </div>
-            <div id="title" class="col-9 border border-warning">
+            <div id="title" class="p-2 d-flex justify-content-center align-items-center">
                 <img src="/assets/img/title.png" alt="titile">
             </div>
         </div>
@@ -33,8 +33,7 @@ img {
 #home {
     background-image: url(/assets/img/bg.png);
     background-repeat:no-repeat;
-    height: 100%;
-    display: flex;
+    height: inherit;
 }
 #header{
     height: 7%;
@@ -52,7 +51,15 @@ img {
     height: 100%;
 }
 #Basebanner {
-    font-size: 40px;
+    font-size: 3rem;
     color: white;
+    margin: 0 auto;
+    font-weight:bold ;
+}
+img{
+    width: auto;
+	height: auto;
+	max-width: 100%;
+	max-height: 100%;
 }
 </style>
