@@ -27,5 +27,20 @@ a{
     text-decoration:none; 
     color:white;
 }
-
+a:link {
+    color:white;
+    TEXT-DECORATION: none
+}
+a:visited {
+    color:white;
+    TEXT-DECORATION: none
+}
+a:hover {
+    color:white;
+    text-decoration: underline;
+}
+a:active {
+    color:white;  
+    text-decoration: underline;
+}
 </style>
