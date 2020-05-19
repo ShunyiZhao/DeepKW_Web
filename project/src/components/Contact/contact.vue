@@ -4,8 +4,9 @@
         <div id="text1">
             <p>Contact Us</p>
         </div>
-        <Map :seenMap="seenMatCont"></Map>
-        <button id="button1" v-on:click="reverse">button1</button>
+        <Map :seenMap="seenMapCont"></Map>
+        <button id="button1" v-if="seenButton1" v-on:click="reverse">button1</button>
+        <button id="button2" v-if="seenButton2" v-on:click="reverse2">button2</button>
         <Basefooter class="fixed-bottom"></Basefooter>
     </div>
 </template>
@@ -20,7 +21,9 @@ import Map from "../ContactModules/Map.vue"
 export default {
     data: function(){
         return {
-            seenMatCont: true
+            seenMapCont: false,
+            seenButton1: true,
+            seenButton2: false
         }
     },
     components: {
@@ -31,7 +34,14 @@ export default {
     },
     methods:{
         reverse: function(){
-            this.seenMatCont = !this.seenMatCont
+            this.seenMapCont = false,
+            this.seenButton1 = false,
+            this.seenButton2 = true
+        },
+        reverse2: function(){
+            this.seenMapCont = true,
+            this.seenButton1 = true,
+            this.seenButton2 = false
         }
     }
 }
@@ -73,5 +83,11 @@ export default {
     position:absolute;
     top:50%;
     left:80%;
+}
+
+#button2 {
+    position:absolute;
+    top:89%;
+    left:95%;
 }
 </style>
