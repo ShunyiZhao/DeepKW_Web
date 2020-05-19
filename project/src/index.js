@@ -7,6 +7,12 @@ import app from '../src/app.vue'
 import '../src/assets/css/bootstrap.min.css'
 import '../src/assets/css/style.css'
 
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { faWeixin,faWeibo,faGithub } from '@fortawesome/free-brands-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+library.add(faWeixin,faWeibo,faGithub)
+Vue.component('font-awesome-icon', FontAwesomeIcon)
+
 new Vue({
     el: '#app',
     render: c => c(app),
