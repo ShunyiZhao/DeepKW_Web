@@ -1,8 +1,7 @@
 <template>
     <div id="works">
-        <Baseheader></Baseheader>
         <div class="container d-flex">
-            <LeftFrame id="navigation"></LeftFrame>
+            <BaseNav></BaseNav>
             <div id="mainbody" class="d-flex flex-row justify-content-around flex-wrap">
                 <FloatingText :message="data1" :title="title1"></FloatingText>
                 <FloatingText :message="data2"></FloatingText>
@@ -16,8 +15,7 @@
     </div>
 </template>
 <script>
-import Basebanner from '../Common/Basebanner.vue'
-import Baseheader from '../Common/Baseheader.vue'
+import BaseNav from '../Common/BaseNav.vue'
 import Basefooter from '../Common/Basefooter.vue'
 import LeftFrame from '../TextFrame/leftFrame.vue'
 import FloatingText from '../TextFrame/FloatText.vue'
@@ -31,8 +29,7 @@ export default {
         }
     },
     components: {
-        Basebanner,
-        Baseheader,
+        BaseNav,
         Basefooter,
         LeftFrame,
         FloatingText

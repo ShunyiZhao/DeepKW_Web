@@ -29,11 +29,11 @@ a{
 }
 a:link {
     color:white;
-    TEXT-DECORATION: none
+    TEXT-DECORATION: none;
 }
 a:visited {
     color:white;
-    TEXT-DECORATION: none
+    TEXT-DECORATION: none;
 }
 a:hover {
     color:white;
