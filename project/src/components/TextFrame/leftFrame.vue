@@ -39,7 +39,6 @@ export default {
     height: 93%;
     width: 20%;
 }
-
 #listinlist {
     font-size: 15pt;
 }

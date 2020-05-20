@@ -1,14 +1,16 @@
 <template>
     <div>
-        <Basebanner></Basebanner>
-        <h1>This is about page!!</h1>
+        <BaseNav></BaseNav>
+        <Basefooter class="fixed-bottom"></Basefooter>
     </div>
 </template>
 <script>
-import Basebanner from '../Common/Basebanner.vue'
+import BaseNav from '../Common/BaseNav.vue'
+import Basefooter from '../Common/Basefooter.vue'
 export default {
     components: {
-        Basebanner
+        BaseNav,
+        Basefooter
     }
 }
 </script>
