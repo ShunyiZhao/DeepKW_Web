@@ -1,7 +1,7 @@
 <template>
     <div id="news">
         <div class="top-section">
-            <BaseNav></BaseNav>
+            <BaseNav ref="nav" :list="subList"></BaseNav>
             <div class="main">111</div>
         </div>
         <Basefooter class="fixed-bottom"></Basefooter>
@@ -17,7 +17,8 @@ export default {
     },
     data:function(){
         return{
-            name : 1
+            name : 1,
+            subList: ["This week", "This month"],
         }
     },
     methods:{
