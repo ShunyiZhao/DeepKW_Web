@@ -1,6 +1,6 @@
 <template>
     <div id="contact">
-        <ContactNavi></ContactNavi>
+        <BaseNav></BaseNav>
         <div id="text1">
             <p>Contact Us</p>
         </div>
@@ -66,6 +66,7 @@ import Basebanner from '../Common/Basebanner.vue'
 import Basefooter from '../Common/Basefooter.vue'
 import ContactNavi from '../TextFrame/ContactNavi.vue'
 import Map from "../ContactModules/Map.vue"
+import BaseNav from '../Common/BaseNav.vue'
 
 
 export default {
@@ -87,6 +88,7 @@ export default {
         Basefooter,
         ContactNavi,
         Map,
+        BaseNav,
     },
     methods:{
         reverse: function(){

@@ -1,4 +1,8 @@
 <template>
+    <div id="wholeNavi">
+    <div id="dwLogo">
+        <img id="logo_img" src="/assets/img/Contact/logo.jpg">
+    </div>
     <ul class="nav-left-container">
         <li v-for="(item,index) in fatherList" :key="index" @click="getIndex($event,item.name)">
             <router-link :to="item.router">{{item.name}}</router-link>
@@ -9,11 +13,13 @@
             </ul>
         </li>
     </ul>
+    </div>
 </template>
 
 <script>
 export default {
     template:'#BaseNav',
+    props:['list'],
     data:function(){
         return{
             subClass:"",
@@ -24,13 +30,17 @@ export default {
                 {router:"/about",name:"About"},
                 {router:"/contact",name:"Contact"}
             ],
-            list:["aaa","bbb","ccc"],
+            list:[],
         }
     },
     methods:{
         getIndex(e,name){
             console.log(name)
-            e.target.nextElementSibling.style.display = "block"
+            if(e.target.nextElementSibling.style.display=="none"){
+                e.target.nextElementSibling.style.display="block"
+            } else{
+                e.target.nextElementSibling.style.display="none"
+            }
         }
     }
 }
@@ -89,12 +99,23 @@ ul,li,div,h1,h2,h3,h4,h5,h6,ol,p {
 }
 .nav-left-container {
     background-color: white;
-    position: fixed;
+    position: absolute;
+    top:5%;
     left: 0;
-    top: 0;
     width: 220px;
-    height: 100%;
+    height: 90%;
 }
+#dwLogo{
+    position:absolute;
+    left:0;
+    top:0;
+}
+
+#logo_img{
+    width:220px;
+    height:5%;
+}
+
 .nav-left-container li a {
     font-size: 1rem;
     box-sizing: border-box;

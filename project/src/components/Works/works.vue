@@ -1,7 +1,7 @@
 <template>
     <div id="works">
         <div class="container d-flex">
-            <BaseNav></BaseNav>
+            <BaseNav :list="subList"></BaseNav>
             <div id="mainbody" class="d-flex flex-row justify-content-around flex-wrap">
                 <FloatingText :message="data1" :title="title1"></FloatingText>
                 <FloatingText :message="data2"></FloatingText>
@@ -25,7 +25,8 @@ export default {
         return{
             title1:"title1",
             data1: "datafromother",
-            data2: "datafrofather"
+            data2: "datafrofather",
+            subList: ['Our Works', 'Other Works']
         }
     },
     components: {

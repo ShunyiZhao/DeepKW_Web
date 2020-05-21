@@ -2,10 +2,9 @@
     <div id="news">
         <div id="mainHome" class="d-flex">
             <div class="px-5 border flex-grow-1">
-                <BaseNav ref="nav"></BaseNav>
+                <BaseNav ref="nav" :list="subList"></BaseNav>
             </div>
             <div id="main" class="p-2 border d-flex justify-content-center align-items-center">
-                111
             </div>
         </div>
         <Basefooter class="fixed-bottom"></Basefooter>
@@ -21,7 +20,8 @@ export default {
     },
     data:function(){
         return{
-            name : 1
+            name : 1,
+            subList: ["This week", "This month"],
         }
     },
     methods:{
