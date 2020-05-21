@@ -1,8 +1,10 @@
 <template>
     <div id="about">
         <div class="top-section">
-            <BaseNav></BaseNav>
-            <div class="main">111</div>
+            <BaseNav :list="subList"></BaseNav>
+            <div class="main">
+                <Groups></Groups>
+            </div>
         </div>
         <Basefooter class="fixed-bottom"></Basefooter>
     </div>
@@ -10,10 +12,17 @@
 <script>
 import BaseNav from '../Common/BaseNav.vue'
 import Basefooter from '../Common/Basefooter.vue'
+import Groups from '../About/groups.vue'
 export default {
     components: {
         BaseNav,
-        Basefooter
+        Basefooter,
+        Groups
+    },
+    data:function(){
+        return{
+            subList: ["Groups","Members", "Graduate"],
+        }
     }
 }
 </script>
@@ -22,5 +31,6 @@ export default {
     background-image: url(/assets/img/About/about_bg1.png);
     background-repeat:no-repeat;
     height: inherit;
+    overflow-y:hidden;
 }
 </style>

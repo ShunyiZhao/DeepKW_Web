@@ -18,7 +18,7 @@ export default {
     data:function(){
         return{
             name : 1,
-            subList: ["This week", "This month"],
+            subList: ["Week", "Month"],
         }
     },
     methods:{

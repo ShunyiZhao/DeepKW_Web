@@ -34,18 +34,18 @@ export default {
     },
     methods:{
         getIndex(e,name){
-            console.log(name)
-            if(e.target.nextElementSibling.style.display=="none"){
-                e.target.nextElementSibling.style.display="block"
+            console.log(name,e.target.nextElementSibling.style.display)
+            if(e.target.nextElementSibling.style.display=="none"||e.target.nextElementSibling.style.display==null){
+                e.target.nextElementSibling.style.display = "block"
             } else{
-                e.target.nextElementSibling.style.display="none"
+                e.target.nextElementSibling.style.display = "none"
             }
         }
     }
 }
 </script>
 
-<style scoped>
+<style lang="css" scoped>
 html,body,ul,li,ol,dl,dd,dt,p,h1,h2,h3,
 h4,h5,h6,form,fieldset,legend,img,input {
     margin: 0;
@@ -138,7 +138,7 @@ ul,li,div,h1,h2,h3,h4,h5,h6,ol,p {
 }
 .nav-left-container-small li a {
     font-size: 1rem;
-    padding: 7px 15px 7px 52px;
+    padding: 0.5rem 0.5rem 0.5rem 1.5rem;
 }
 .nav-left-container-small {
     display: none;
