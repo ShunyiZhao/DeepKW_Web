@@ -67,6 +67,10 @@ import Basefooter from '../Common/Basefooter.vue'
 import ContactNavi from '../TextFrame/ContactNavi.vue'
 import Map from "../ContactModules/Map.vue"
 import BaseNav from '../Common/BaseNav.vue'
+import axios from 'axios'
+axios.defaults.baseURL = '/root'
+
+var url="http://localhost:3000"
 
 
 export default {
@@ -104,11 +108,25 @@ export default {
             this.seenTable = false
         },
         submitTable: function(){
-            alert(this.nameInput);
-            alert(this.genderInput);
-            alert(this.countryInput);
-            alert(this.uniInput);
-            alert(this.textInput);
+            //alert(this.nameInput);
+            //alert(this.genderInput);
+            //alert(this.countryInput);
+            //alert(this.uniInput);
+            //alert(this.textInput);
+            axios.get('/submit', {
+                params: {
+                    name: this.nameInput,
+                    gender: this.genderInput,
+                    country: this.countryInput,
+                    university: this.uniInput,
+                    info: this.textInput
+                }
+            }).then(function (response) {
+                //console.log(response);
+                //alert(response.data[0].name);
+            }).catch(function (error) {
+                console.log(error);
+            });
             this.clearInfo();
         },
         clearInfo: function(){

@@ -69,9 +69,19 @@ module.exports = {
     },
     devServer: { 
         open: true, // 自动打开浏览器
-        port: 3000, // 设置启动时候的运行端口
+        port: 3050, // 设置启动时候的运行端口
         contentBase: 'src', // 指定托管的根目录
-        hot: true // 启用热更新 的 第1步
+        hot: true, // 启用热更新 的 第1步
+        //use agency to get or post from other site
+        proxy: {
+            '/root': {
+                target: 'http://localhost:3000',
+                changeOrigin: true,
+                pathRewrite: {
+                    '^/root': ''
+                }
+            }
+        }
     },
     output: {
         filename: 'bundle.js',
