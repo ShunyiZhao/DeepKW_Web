@@ -1,7 +1,7 @@
 <template>
-<div id="wholeNavi" class="px-2">
+<div id="wholeNavi">
     <div id="dwLogo">
-        <img id="logo_img" src="/assets/img/Contact/logo.jpg">
+        <img id="logo_img" class="px-3" src="/assets/img/Contact/logo.jpg">
     </div> 
     <ul class="nav-left-container">
         <li v-for="(item,index) in fatherList" :key="index" @click="getIndex($event,item.name)">
