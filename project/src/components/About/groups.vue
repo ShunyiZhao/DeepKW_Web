@@ -2,17 +2,38 @@
     <div id="groups">
         <div class="border-side"></div>
             <div class="sub-block">
-                <img id="a2" src="/assets/img/About/about2.png" alt="centerAbout">
-                <img id="a4" src="/assets/img/About/about2.png" alt="centerAbout">
-                <img id="a6" src="/assets/img/About/about2.png" alt="centerAbout">
+                <div id="a2">
+                    <img src="/assets/img/About/about2.png" alt="centerAbout">
+                    <span style="font-size: 1.3em;">Mathematical Modeling</span>
+                </div>
+                <div id="a4">
+                    <img src="/assets/img/About/about2.png" alt="centerAbout">
+                    <span style="font-size: 1.5em;">Computer Social Science</span>
+                </div>
+                <div id="a6">
+                    <img src="/assets/img/About/about2.png" alt="centerAbout">
+                    <span style="font-size: 2em;">Aritifical Intelligence</span>
+                </div>
             </div>
             <div class="block">
-                <img id="a1" src="/assets/img/About/about2.png" alt="centerAbout">
+                <div id="a1">
+                    <img src="/assets/img/About/about2.png" alt="centerAbout">
+                    <span style="font-size: 3.5em;">DeepKW</span>
+                </div>
             </div>
             <div class="sub-block">
-                <img id="a3" src="/assets/img/About/about2.png" alt="centerAbout">
-                <img id="a5" src="/assets/img/About/about2.png" alt="centerAbout">
-                <img id="a7" src="/assets/img/About/about2.png" alt="centerAbout">
+                <div id="a3">
+                    <img src="/assets/img/About/about2.png" alt="centerAbout">
+                    <span style="font-size: 1.4em;">Science Development</span>
+                </div>
+                <div id="a5">
+                    <img src="/assets/img/About/about2.png" alt="centerAbout">
+                    <span style="font-size: 1.5em;">Data Science</span>
+                </div>
+                <div id="a7">
+                    <img src="/assets/img/About/about2.png" alt="centerAbout">
+                    <span style="font-size: 2em;">Visual Design</span>
+                </div>
             </div>
         <div class="border-side"></div>            
     </div>
@@ -20,16 +41,14 @@
 
 <script>
 export default {
-    template:'#groups',
-    data:function(){
-        return{
-        }
-    }
+    template:'#groups'
 }
 </script>
 
 <style scoped>
 #groups{
+    background-image: url(/assets/img/About/about_bg1.png);
+    background-repeat:no-repeat;
     height: 100%;
     display: flex;
 }
@@ -46,61 +65,67 @@ export default {
 .border-side{
     width: 8.5%;
 }
+img {
+    max-width: 100%;
+    max-height: 100%;
+}
 #a1 {
-    max-width: 90%;
-    max-height: 90%;
+    width: 90%;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
 }
 #a2 {
-    max-width: 50%;
-    max-height: 50%;
+    width: 65%;
     position: absolute;
     top: 20%;
     left: 70%;
     transform: translate(-20%,-70%);
 }
 #a3 {
-    max-width: 65%;
-    max-height: 65%;
+    width: 65%;
     position: absolute;
     top: 20%;
     left: 50%;
     transform: translate(-20%,-50%);
 }
 #a4 {
-    max-width: 80%;
-    max-height: 80%;
+    width: 80%;
     position: absolute;
     top: 95%;
     left: 120%;
     transform: translate(-90%,-90%);
 }
 #a5 {
-    max-width: 75%;
-    max-height: 75%;
+    width: 75%;
     position: absolute;
     top: 95%;
     left: 80%;
     transform: translate(-55%,-75%);
 }
 #a6 {
-    max-width: 85%;
-    max-height: 85%;
+    width: 85%;
     position: absolute;
     top: 45%;
     left: 40%;
     transform: translate(-45%,-40%);
 }
 #a7 {
-    max-width: 87%;
-    max-height: 97%;
+    width: 87%;
     position: absolute;
     top: 65%;
     left: 65%;
     transform: translate(-95%,-65%);
+}
+span {
+    position: absolute; 
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    color:skyblue;
+    font-size:medium;
 }
 </style>
 

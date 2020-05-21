@@ -28,8 +28,6 @@ export default {
 </script>
 <style scoped>
 #about {
-    background-image: url(/assets/img/About/about_bg1.png);
-    background-repeat:no-repeat;
     height: inherit;
     overflow-y:hidden;
 }
