@@ -95,7 +95,7 @@ ul,li,div,h1,h2,h3,h4,h5,h6,ol,p {
 }
 #wholeNavi{
     height: 100%;
-    width: 25%;
+    width: 15%;
     background-color: white;
 }
 .nav-left-container {
