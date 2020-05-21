@@ -37,9 +37,6 @@ export default {
 </script>
 
 <style scoped>
-.Chang{
-    display:block;
-}
 html,body,ul,li,ol,dl,dd,dt,p,h1,h2,h3,
 h4,h5,h6,form,fieldset,legend,img,input {
     margin: 0;
@@ -89,10 +86,7 @@ ul,li,div,h1,h2,h3,h4,h5,h6,ol,p {
 }
 .nav-left-container {
     background-color: white;
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 220px;
+    width: 25%;
     height: 100%;
 }
 .nav-left-container li a {

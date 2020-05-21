@@ -1,6 +1,9 @@
 <template>
-    <div>
-        <BaseNav></BaseNav>
+    <div id="about">
+        <div class="top-section">
+            <BaseNav></BaseNav>
+            <div class="main">111</div>
+        </div>
         <Basefooter class="fixed-bottom"></Basefooter>
     </div>
 </template>
@@ -14,3 +17,10 @@ export default {
     }
 }
 </script>
+<style scoped>
+#about {
+    background-image: url(/assets/img/About/about_bg1.png);
+    background-repeat:no-repeat;
+    height: inherit;
+}
+</style>
