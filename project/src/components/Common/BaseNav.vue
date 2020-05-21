@@ -1,8 +1,8 @@
 <template>
-    <div id="wholeNavi">
+<div id="wholeNavi" class="px-2">
     <div id="dwLogo">
         <img id="logo_img" src="/assets/img/Contact/logo.jpg">
-    </div>
+    </div> 
     <ul class="nav-left-container">
         <li v-for="(item,index) in fatherList" :key="index" @click="getIndex($event,item.name)">
             <router-link :to="item.router">{{item.name}}</router-link>
@@ -13,7 +13,7 @@
             </ul>
         </li>
     </ul>
-    </div>
+</div>
 </template>
 
 <script>
@@ -29,8 +29,7 @@ export default {
                 {router:"/works",name:"Works"},
                 {router:"/about",name:"About"},
                 {router:"/contact",name:"Contact"}
-            ],
-            list:[],
+            ]
         }
     },
     methods:{
@@ -94,22 +93,30 @@ s,i,em {
 ul,li,div,h1,h2,h3,h4,h5,h6,ol,p {
     box-sizing: border-box;
 }
-.nav-left-container {
-    background-color: white;
-    width: 25%;
+#wholeNavi{
     height: 100%;
+    width: 25%;
+    background-color: white;
+}
+.nav-left-container {
+    height: 90%;
 }
 #dwLogo{
-    position:absolute;
-    left:0;
-    top:0;
+    height: 10%;
+    position: relative;
 }
-
 #logo_img{
-    width:220px;
-    height:5%;
+    width: auto;
+	height: auto;
+	max-width: 100%;
+    max-height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
 }
-
 .nav-left-container li a {
     font-size: 1rem;
     box-sizing: border-box;
