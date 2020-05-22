@@ -40,10 +40,23 @@ The home page of this project is shown below:
     \includegraphics[height=4cm]{img/02.png}
     \includegraphics[height=4cm]{img/05.jpg}
     \caption{home page and about page}
-    \label{fig: homepage}
+    \label{fig: figure1}
 \end{figure}
 \\
 \section{Technology Evaluation}
+\subsection{Estimation of marks}
+\begin{itemize}
+    \item A for HTML
+    \item A for CSS
+    \item A for JS
+    \item B for PNG
+    \item B for SVG
+    \item B for Server
+    \item B for Database
+    \item B for dynamic pages
+    \item 12 for Depth (out of 20)
+\end{itemize} 
+
 \subsection{Client Side}
 We chose a popular javascript framework, Vue.js (version 2.6.11), to 
 develop these pages.
@@ -63,11 +76,44 @@ Adobe Photoshop and Illustrator (Authorized) are used to design the
 blueprint of the website, and some .png file are created by them. 
 Some icons, such as the logo of group, are drawn by SVG.
 
+\subsubsection{HTML}
+\subsubsection{CSS}
+\subsubsection{JavaScript}
+\subsubsection{PNG}
+Some images used in this project are drawn with GIMP 2. One of the examples,
+textit{table.png} which is ued in \textit{Contact.vue}, is shown below in 
+Figure \ref{fig: figure2}.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics{img/sectionPNG/table2.png}
+    \includegraphics{img/sectionPNG/table1.png}
+    \caption{Left: the image after adding three text objects. 
+    Right: add three rectangles with 48.0 opaqueness.}
+    \label{fig: figure2}
+\end{figure}
+
+\noindent
+Firstly, we added three text objects into a $ 300 \times 400 $ file, and then 
+typed in some useful information. Then the coverages of these text objects are
+combined to fix the positions of them. The result of this stage is shown in the 
+left image of Figure \ref{fig: figure2}. And then, three rectangular layers are 
+added, the result is shown in the right image of Figure \ref{fig: figure2}. 
+
+
+
+\subsubsection{SVG}
+
 \subsection{Sever Side}
-The development of Sever is also in node.js.
-We might use Express as a server framework and Sqlite to manage databases. 
-And the concept page shown before homepage will be displayed by a dynamic page.
+\subsubsection{Server}
+The development of Sever is also in node.js. We use \textit{express} as the 
+server framework.
+\subsubsection{Database}
+We choose \textit{sqlite3} to manage our databases. 
+We use four tables, including candidata, , in this project.
+The ER relationship of 
+tables used in this project is shown below. 
 
-
+\subsubsection{Dynamic Page}
     
 \end{document}

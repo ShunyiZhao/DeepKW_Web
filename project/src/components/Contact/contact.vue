@@ -5,6 +5,8 @@
             <p>Contact Us</p>
         </div>
         <Map :seenMap="seenMapCont"></Map>
+        <!--Insert an arrow image -->
+        <img id = "arrow" src="/assets/img/Contact/arrow.svg" v-if="seenButton1">
 
         <input id="button1" type="image" src="/assets/img/Contact/formbutton.png" v-if="seenButton1" v-on:click="reverse">button1</input>
         <input id="button2" type="image" src="/assets/img/Contact/returnButton.png" v-if="seenButton2" v-on:click="reverse2">button2</input>
@@ -141,6 +143,13 @@ export default {
 </script>
 
 <style scoped>
+#arrow {
+    position:absolute;
+    top: 25%;
+    left: 80%;
+    width: 10%;
+}
+
 #contact {
     height: 100%;
     width: 100%;
