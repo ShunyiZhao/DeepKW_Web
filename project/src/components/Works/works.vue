@@ -2,13 +2,16 @@
     <div id="works">
         <div class="top-section">
             <BaseNav :list="subList"></BaseNav>
-            <div class="main d-flex flex-row justify-content-around flex-wrap">
-                <FloatingText :message="data1" :title="title1"></FloatingText>
-                <FloatingText :message="data2"></FloatingText>
-                <FloatingText :message="data1"></FloatingText>
-                <FloatingText :message="data2"></FloatingText>
-                <FloatingText :message="data1"></FloatingText>
-                <FloatingText :message="data2"></FloatingText>
+            <div class="main">
+                <Selecter></Selecter>
+                <div id="work_contencts" class="d-flex flex-row justify-content-around flex-wrap">
+                    <FloatingText :message="data1" :title="title1"></FloatingText>
+                    <FloatingText :message="data2"></FloatingText>
+                    <FloatingText :message="data1"></FloatingText>
+                    <FloatingText :message="data2"></FloatingText>
+                    <FloatingText :message="data1"></FloatingText>
+                    <FloatingText :message="data2"></FloatingText>
+                </div>
             </div>
         </div>
         <Basefooter class="fixed-bottom"></Basefooter>
@@ -17,7 +20,7 @@
 <script>
 import BaseNav from '../Common/BaseNav.vue'
 import Basefooter from '../Common/Basefooter.vue'
-import LeftFrame from '../TextFrame/leftFrame.vue'
+import Selecter from '../Works/Selecter.vue'
 import FloatingText from '../TextFrame/FloatText.vue'
 
 export default {
@@ -32,7 +35,7 @@ export default {
     components: {
         BaseNav,
         Basefooter,
-        LeftFrame,
+        Selecter,
         FloatingText
     }
 }
