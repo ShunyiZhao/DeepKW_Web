@@ -7,8 +7,12 @@
                     <p>Contact Us</p>
                 </div>
                 <Map :seenMap="seenMapCont"></Map>
+                <!--Insert an arrow image -->
+                <img id = "arrow" src="/assets/img/Contact/arrow.svg" v-if="seenButton1">
+
                 <input id="button1" type="image" src="/assets/img/Contact/formbutton.png" v-if="seenButton1" v-on:click="reverse">button1</input>
                 <input id="button2" type="image" src="/assets/img/Contact/returnButton.png" v-if="seenButton2" v-on:click="reverse2">button2</input>
+
                 <div id="form1" v-if="seenTable">
                     <table border="0">
                         <th>Personal Infomation</th>
@@ -69,6 +73,10 @@ import Basefooter from '../Common/Basefooter.vue'
 import ContactNavi from '../TextFrame/ContactNavi.vue'
 import Map from "../ContactModules/Map.vue"
 import BaseNav from '../Common/BaseNav.vue'
+import axios from 'axios'
+axios.defaults.baseURL = '/root'
+
+var url="http://localhost:3000"
 
 
 export default {
@@ -106,11 +114,25 @@ export default {
             this.seenTable = false
         },
         submitTable: function(){
-            alert(this.nameInput);
-            alert(this.genderInput);
-            alert(this.countryInput);
-            alert(this.uniInput);
-            alert(this.textInput);
+            //alert(this.nameInput);
+            //alert(this.genderInput);
+            //alert(this.countryInput);
+            //alert(this.uniInput);
+            //alert(this.textInput);
+            axios.get('/submit', {
+                params: {
+                    name: this.nameInput,
+                    gender: this.genderInput,
+                    country: this.countryInput,
+                    university: this.uniInput,
+                    info: this.textInput
+                }
+            }).then(function (response) {
+                //console.log(response);
+                //alert(response.data[0].name);
+            }).catch(function (error) {
+                console.log(error);
+            });
             this.clearInfo();
         },
         clearInfo: function(){
@@ -125,6 +147,13 @@ export default {
 </script>
 
 <style scoped>
+#arrow {
+    position:absolute;
+    top: 25%;
+    left: 80%;
+    width: 10%;
+}
+
 #contact {
     height: 100%;
     width: 100%;
