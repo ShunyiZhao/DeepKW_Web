@@ -1,63 +1,67 @@
 <template>
     <div id="contact">
-        <BaseNav></BaseNav>
-        <div id="text1">
-            <p>Contact Us</p>
-        </div>
-        <Map :seenMap="seenMapCont"></Map>
-        <!--Insert an arrow image -->
-        <img id = "arrow" src="/assets/img/Contact/arrow.svg" v-if="seenButton1">
+        <div class="top-section">
+            <BaseNav></BaseNav>
+            <div class="main">
+                <div id="text1">
+                    <p>Contact Us</p>
+                </div>
+                <Map :seenMap="seenMapCont"></Map>
+                <!--Insert an arrow image -->
+                <img id = "arrow" src="/assets/img/Contact/arrow.svg" v-if="seenButton1">
 
-        <input id="button1" type="image" src="/assets/img/Contact/formbutton.png" v-if="seenButton1" v-on:click="reverse">button1</input>
-        <input id="button2" type="image" src="/assets/img/Contact/returnButton.png" v-if="seenButton2" v-on:click="reverse2">button2</input>
+                <input id="button1" type="image" src="/assets/img/Contact/formbutton.png" v-if="seenButton1" v-on:click="reverse">button1</input>
+                <input id="button2" type="image" src="/assets/img/Contact/returnButton.png" v-if="seenButton2" v-on:click="reverse2">button2</input>
 
-        <div id="form1" v-if="seenTable">
-            <table border="0">
-                <th>Personal Infomation</th>
-                <tr>
-                    <td>
-                        <span>Name: </span>
-                        <input placeholder="name" style="background:none" v-model="nameInput">
-                    </td>
-                    <td>
-                        <span>Gender:</span>
-                        <select style="background:none" v-model="genderInput">
-                            <option disable value="">Please select</option>
-                            <option>Male</option>
-                            <option>Female</option>
-                            <option>Others</option>
-                        </select>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <span>Country:</span>
-                        <select style="background:none" v-model="countryInput">
-                            <option disable value="">Select a country</option>
-                            <option>China</option>
-                            <option>French</option>
-                            <option>UK</option>
-                            <option>USA</option>
-                        </select>
-                    </td>
-                    <td>
-                        <span>University:</span>
-                        <input placeholder="university" style="background:none" v-model="uniInput">
-                    </td>
-                </tr>
-                <tr>
-                    <td colspan="2">
-                    <span>Your instrests</span>
-                    <br>
-                    <textarea placeholder="Your interests" rows="10" cols="61" v-model="textInput"></textarea>
-                    </td>
-                </tr>
-                <tr>
-                    <td colspan="2">
-                        <button id="submit" v-on:click="submitTable">submit</button>
-                    </td>
-                </tr>
-            </table>
+                <div id="form1" v-if="seenTable">
+                    <table border="0">
+                        <th>Personal Infomation</th>
+                        <tr>
+                            <td>
+                                <span>Name: </span>
+                                <input placeholder="name" style="background:none" v-model="nameInput">
+                            </td>
+                            <td>
+                                <span>Gender:</span>
+                                <select style="background:none" v-model="genderInput">
+                                    <option disable value="">Please select</option>
+                                    <option>Male</option>
+                                    <option>Female</option>
+                                    <option>Others</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span>Country:</span>
+                                <select style="background:none" v-model="countryInput">
+                                    <option disable value="">Select a country</option>
+                                    <option>China</option>
+                                    <option>French</option>
+                                    <option>UK</option>
+                                    <option>USA</option>
+                                </select>
+                            </td>
+                            <td>
+                                <span>University:</span>
+                                <input placeholder="university" style="background:none" v-model="uniInput">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                            <span>Your instrests</span>
+                            <br>
+                            <textarea placeholder="Your interests" rows="10" cols="61" v-model="textInput"></textarea>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <button id="submit" v-on:click="submitTable">submit</button>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
         </div>
         <Basefooter class="fixed-bottom"></Basefooter>
     </div>
