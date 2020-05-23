@@ -1,8 +1,8 @@
 <template>
-    <div id="wholeNavi">
+<div id="wholeNavi">
     <div id="dwLogo">
-        <img id="logo_img" src="/assets/img/Contact/logo.jpg">
-    </div>
+        <img id="logo_img" class="px-3" src="/assets/img/Contact/logo.jpg">
+    </div> 
     <ul class="nav-left-container">
         <li v-for="(item,index) in fatherList" :key="index" @click="getIndex($event,item.name)">
             <router-link :to="item.router">{{item.name}}</router-link>
@@ -13,7 +13,7 @@
             </ul>
         </li>
     </ul>
-    </div>
+</div>
 </template>
 
 <script>
@@ -29,27 +29,23 @@ export default {
                 {router:"/works",name:"Works"},
                 {router:"/about",name:"About"},
                 {router:"/contact",name:"Contact"}
-            ],
-            list:[],
+            ]
         }
     },
     methods:{
         getIndex(e,name){
-            console.log(name)
-            if(e.target.nextElementSibling.style.display=="none"){
-                e.target.nextElementSibling.style.display="block"
+            console.log(name,e.target.nextElementSibling.style.display)
+            if(e.target.nextElementSibling.style.display=="none"||e.target.nextElementSibling.style.display==null){
+                e.target.nextElementSibling.style.display = "block"
             } else{
-                e.target.nextElementSibling.style.display="none"
+                e.target.nextElementSibling.style.display = "none"
             }
         }
     }
 }
 </script>
 
-<style scoped>
-.Chang{
-    display:block;
-}
+<style lang="css" scoped>
 html,body,ul,li,ol,dl,dd,dt,p,h1,h2,h3,
 h4,h5,h6,form,fieldset,legend,img,input {
     margin: 0;
@@ -97,25 +93,30 @@ s,i,em {
 ul,li,div,h1,h2,h3,h4,h5,h6,ol,p {
     box-sizing: border-box;
 }
-.nav-left-container {
+#wholeNavi{
+    height: 100%;
+    width: 15%;
     background-color: white;
-    position: absolute;
-    top:5%;
-    left: 0;
-    width: 220px;
+}
+.nav-left-container {
     height: 90%;
 }
 #dwLogo{
-    position:absolute;
-    left:0;
-    top:0;
+    height: 10%;
+    position: relative;
 }
-
 #logo_img{
-    width:220px;
-    height:5%;
+    width: auto;
+	height: auto;
+	max-width: 100%;
+    max-height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
 }
-
 .nav-left-container li a {
     font-size: 1rem;
     box-sizing: border-box;
@@ -137,7 +138,7 @@ ul,li,div,h1,h2,h3,h4,h5,h6,ol,p {
 }
 .nav-left-container-small li a {
     font-size: 1rem;
-    padding: 7px 15px 7px 52px;
+    padding: 0.5rem 0.5rem 0.5rem 1.5rem;
 }
 .nav-left-container-small {
     display: none;

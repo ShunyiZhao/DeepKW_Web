@@ -1,11 +1,8 @@
 <template>
     <div id="news">
-        <div id="mainHome" class="d-flex">
-            <div class="px-5 border flex-grow-1">
-                <BaseNav ref="nav" :list="subList"></BaseNav>
-            </div>
-            <div id="main" class="p-2 border d-flex justify-content-center align-items-center">
-            </div>
+        <div class="top-section">
+            <BaseNav ref="nav" :list="subList"></BaseNav>
+            <div class="main">111</div>
         </div>
         <Basefooter class="fixed-bottom"></Basefooter>
     </div>
@@ -21,7 +18,7 @@ export default {
     data:function(){
         return{
             name : 1,
-            subList: ["This week", "This month"],
+            subList: ["Week", "Month"],
         }
     },
     methods:{
@@ -31,3 +28,8 @@ export default {
     }
 }
 </script>
+<style lang="css" scoped>
+#news{
+    height: inherit;
+}
+</style>

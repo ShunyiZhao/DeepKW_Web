@@ -11,12 +11,16 @@
 </template>
 <style scoped>
 #footer{
-    padding: 1rem 0;
+    height: 5%;
     background-color: black;
     display: flex;
     flex-direction: row;
     justify-content: center;
     color:white;
+}
+#content,#copyright,#translation {
+    margin-top: auto;
+    margin-bottom: auto;
 }
 </style>
 <script>

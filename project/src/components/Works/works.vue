@@ -1,14 +1,17 @@
 <template>
     <div id="works">
-        <div class="container d-flex">
+        <div class="top-section">
             <BaseNav :list="subList"></BaseNav>
-            <div id="mainbody" class="d-flex flex-row justify-content-around flex-wrap">
-                <FloatingText :message="data1" :title="title1"></FloatingText>
-                <FloatingText :message="data2"></FloatingText>
-                <FloatingText :message="data1"></FloatingText>
-                <FloatingText :message="data2"></FloatingText>
-                <FloatingText :message="data1"></FloatingText>
-                <FloatingText :message="data2"></FloatingText>
+            <div class="main">
+                <Selecter></Selecter>
+                <div id="work_contencts" class="d-flex flex-row justify-content-around flex-wrap">
+                    <FloatingText :message="data1" :title="title1"></FloatingText>
+                    <FloatingText :message="data2"></FloatingText>
+                    <FloatingText :message="data1"></FloatingText>
+                    <FloatingText :message="data2"></FloatingText>
+                    <FloatingText :message="data1"></FloatingText>
+                    <FloatingText :message="data2"></FloatingText>
+                </div>
             </div>
         </div>
         <Basefooter class="fixed-bottom"></Basefooter>
@@ -17,7 +20,7 @@
 <script>
 import BaseNav from '../Common/BaseNav.vue'
 import Basefooter from '../Common/Basefooter.vue'
-import LeftFrame from '../TextFrame/leftFrame.vue'
+import Selecter from '../Works/Selecter.vue'
 import FloatingText from '../TextFrame/FloatText.vue'
 
 export default {
@@ -32,36 +35,16 @@ export default {
     components: {
         BaseNav,
         Basefooter,
-        LeftFrame,
+        Selecter,
         FloatingText
     }
 }
 </script>
 <style scoped>
-.container{
-    padding: 0;
-    margin: 0;
-    height: 90%;
-}
 #works {
-    height: 100%;
+    height:inherit;
     /*test comments in CSS*/
     background-image: url(/assets/img/bg.png);
-}
-#header {
-    height: 7%;
-    background-color: black;
-}
-#navigation {
-    font-size: 20pt;
-    color: white;
-    background-color: black;
-    width: 25%;
-    height: 100%;
-}
-#mainbody{
-    width: 75%;
-    height: 100%;
 }
 .float {
     color: white;
